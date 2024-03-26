@@ -3,6 +3,8 @@
 3. Apakah Anda memiliki pengalaman tertentu yang relevan dengan peran Data Engineer?
 4. Skills apa saja yang anda rencanakan untuk ditekuni dan dikuasai dalam 1thn kedepan?
 5. Bagaimana cara/ rencana anda dalam mengusai skill tersebut?
-
-
+6. Buatlah satu ide projek dan berikan alasannya 
+    contoh: 
+        ide: membuat machine learning untuk mengidentifikasi orang tidak fokus
+        alasan: untuk di implementasikan di lingkungan pembelajaran agar memastikan partisipan fokus
 
