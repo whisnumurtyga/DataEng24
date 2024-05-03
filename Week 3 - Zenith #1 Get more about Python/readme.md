@@ -3,7 +3,7 @@
 **Di minggu ini kita akan mengeksplorasikan tentang penerapan fungsi basic python yang baru saja kita bahas di meet online minggu ke-2.** <br> Siapa sih yang ga kenal dengan bahasa pemrograman ini. Dalam beberapa tahun terakhir, Python menjadi bahasa pemrograman yang paling populer digunakan di berbagai belahan dunia. Python bisa digunakan untuk berbagai kebutuhan mulai dari machine learning, pengujian perangkat lunak sampai website. Wowww menarik sekali bukan langsung saja ke pembahasan👇🏻👇🏻 <br>
 
 **Apa itu python ?? Yuk kenalan dengan Bahasa Pemrogaman ini? 🥰** <br>
-Karena sifatnya yang serba guna dan mudah digunakan, python menjadi bahasa pemrograman yang paling banyak digunakan terutama untuk pemula.<br>
+Karena sifatnya yang serba guna dan mudah digunakan, python menjadi bahasa pemrograman yang paling banyak digunakan terutama untuk pemula.<br><br>
 **Contoh penggunaan python :**<br>
 *1. Analisis Data dan Machine Learning* <br>
 Python telah menjadi bagian yang cukup penting dalam data science dan AI (artificial intelligence) karena mudah dipahami dan menyediakan package yang dibutuhkan oleh data analyst, contohnya matplotlib, numpy, pandas, scikit-learn<br>
