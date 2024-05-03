@@ -1,4 +1,4 @@
-# Haloo semuaaa, selamat datang di sesi ZENITH #1 🤩 <br>
+# Haloo semuaaa, selamat datang di ZENITH 1 🤩 <br>
 
 **Di minggu ini kita akan mengeksplorasikan tentang penerapan fungsi basic python yang baru saja kita bahas di meet online minggu ke-2.** <br> Siapa sih yang ga kenal dengan bahasa pemrograman ini. Dalam beberapa tahun terakhir, Python menjadi bahasa pemrograman yang paling populer digunakan di berbagai belahan dunia. Python bisa digunakan untuk berbagai kebutuhan mulai dari machine learning, pengujian perangkat lunak sampai website. Wowww menarik sekali bukan langsung saja ke pembahasan👇🏻👇🏻 <br>
 
