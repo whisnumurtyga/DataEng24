@@ -31,12 +31,12 @@ Python mendukung pemrograman yang berorientasi objek, dimana desain software aka
 **Bagaimana cara menggunakan python?? 🖥🖥**<br>
 Kalian bisa menggunakan python kalian perlu menggunakan Python IDE. Integrated Development Environment atau disingkat IDE merupakan program komputer yang memiliki berbagai fasilitas yang dapat digunakan untuk membangun aplikasi atau website. <br>
 **Berikut rekomendasi Python IDE Open Source dan Code Editor Terbaik untuk Data Science dan Pengembangan Program :**<br>
-*1. Jupyter*<br><br>
-Jupyter merupakan aplikasi  berbasis web yang mendukung 40 bahasa pemrograman termasuk bahasa pemrograman Python. Penambahan komponen HTML dari gambar ke video juga bisa dilakukan dengan menggunakan Jupyter. 
-*2. Visual Studio Code*<br><br>
-Software ini bersifat open source di bawah lisensi MIT. Apa bedanya dengan Visual Studio? Visual Studio lebih dikategorikan sebagai IDE dimana pengguna dapat melakukan debugging, compiling, membuat package, dan lain sebagainya. 
-*3. Google Colab*<br><br>
-Google Colab  menyediakan tiga jenis prosesor handalnya untuk keperluan mesin pembelajaran (machine learning) yaitu: Central Processing Unit (CPU), Graphic Processing Unit (GPU) dan Tensor Processing Unit (TPU). Google Colab bisa dijadikan referensi bagi sahabat data untuk meningkatkan skill dan juga belajar python.<br><br>
+*1. Jupyter*<br>
+Jupyter merupakan aplikasi  berbasis web yang mendukung 40 bahasa pemrograman termasuk bahasa pemrograman Python. Penambahan komponen HTML dari gambar ke video juga bisa dilakukan dengan menggunakan Jupyter. <br> 
+*2. Visual Studio Code*<br>
+Software ini bersifat open source di bawah lisensi MIT. Apa bedanya dengan Visual Studio? Visual Studio lebih dikategorikan sebagai IDE dimana pengguna dapat melakukan debugging, compiling, membuat package, dan lain sebagainya. <br>
+*3. Google Colab*<br>
+Google Colab  menyediakan tiga jenis prosesor handalnya untuk keperluan mesin pembelajaran (machine learning) yaitu: Central Processing Unit (CPU), Graphic Processing Unit (GPU) dan Tensor Processing Unit (TPU). Google Colab bisa dijadikan referensi bagi sahabat data untuk meningkatkan skill dan juga belajar python.<br>
 
 >Untuk penjelasan lebih mendalam mengenai pyhton kalian bisa baca dokumentasi berikut (https://docs.python.org/3/tutorial/index.html)🤗🤗<br>
 ---
