@@ -12,7 +12,7 @@ Terdapat 4 struktur data pada pemrograman bahasa Python, ada list, tuple, set da
  List          | ✅           | ✅         | `[1, 2, 3, 4, 5]` |        
 | Set           | ✅           | 🚫      | `{1, 2, 3, 4, 5}` |        
 | Tuple         | 🚫        | ✅         | `(1, 2, 3, 4, 5)` |        
-| Dictionary    | ✅           | 🚫      | `{'a': 1, 'b': 2, 'c': 3}` |
+| Dictionary    | 🚫           | 🚫      | `{'a': 1, 'b': 2, 'c': 3}` |
 > Sederhananya perbedaannya adalah seperti tabel diatas
 #### Kenapa kita perlu mengetahui struktur data? 🤔 
 *Emang ada hubungannya kah dengan yang nantinya kita pelajari dalam mengolah data?*
