@@ -96,7 +96,7 @@ c. Peningkatan Kualitas Kode
 ## B. Check Inconsistent Value using `Set`
 Dalam kasus preprocessing data bisa saja data yang kita terima tidak hanya berasal dari sumber. Bisa saja kita menggabungkan data dari berbagai sumber menjadi satu.
 
-Data yang dikumpulkan dari berbagai sumber bisa saja tidak konsisten, misalnya seperti data berikut (contoh data kepuasan pelanggan dari seluruh cabang)
+Data yang dikumpulkan dari berbagai sumber bisa saja tidak konsisten, misalnya seperti data berikut (contoh data kepuasan pelanggan dari seluruh cabang) <br>
 **Data Kepuasan Pelanggan Customer Cabang A** 
 | Nama Customer | Gender | Rating | Usia |
 |---------------|--------|--------|------|
