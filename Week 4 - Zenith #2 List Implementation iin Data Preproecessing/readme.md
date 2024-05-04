@@ -18,7 +18,7 @@ Terdapat 4 struktur data pada pemrograman bahasa Python, ada list, tuple, set da
 *Emang ada hubungannya kah dengan yang nantinya kita pelajari dalam mengolah data?*
 #### Jelas ada Dong 🤗
 *Berikut beberapa contoh penerapan struktur data python pada data preprocessing*
-## Columns filtering using `List`
+## A. Columns filtering using `List`
 Semisal kita punya Dataframe seperti berikut:
 
 |   Name |   Age | Birthdate   | City        |
@@ -93,3 +93,140 @@ c. Peningkatan Kualitas Kode
 
 ### Nah menurutmu gimana untuk struktur data lainnya? 
 > Bagaimanakah set, tuple dan dictionary di terapkan pada preprocessing data?
+## B. Check Inconsistent Value using `Set`
+Dalam kasus preprocessing data bisa saja data yang kita terima tidak hanya berasal dari sumber. Bisa saja kita menggabungkan data dari berbagai sumber menjadi satu.
+
+Data yang dikumpulkan dari berbagai sumber bisa saja tidak konsisten, misalnya seperti data berikut (contoh data kepuasan pelanggan dari seluruh cabang)
+**Data Kepuasan Pelanggan Customer Cabang A** 
+| Nama Customer | Gender | Rating | Usia |
+|---------------|--------|--------|------|
+| John          | Male   | A      | 28   |
+| Emily         | Female | B      | 41   |
+| Bobi          | Unknown| C      | 28   |
+| John          | Male   | A      | 26   |
+| Emily         | Female | B      | 33   |
+
+**Data Kepuasan Pelanggan Customer Cabang B** 
+| Nama Customer | Gender  | Rating | Usia |
+|---------------|---------|--------|------|
+| Bang          | M       | Bagus  | 38   |
+| Bingg         | F       | Biasa  | 28   |
+| Bung          | Unknown | Jelek  | 39   |
+| Bong          | M       | Bagus  | 45   |
+| Bonkk         | F       | Biasa  | 33   |
+
+**Data Kepuasan Pelanggan Customer Cabang C** 
+| Nama Customer | Gender  | Rating | Usia |
+|---------------|---------|--------|------|
+| Jordd          | L       | 3      | 38   |
+| Jirddd         | P       | 2      | 28   |
+| Jurdd          | -       | 1      | 39   |
+| Tensu          | L       | 3      | 45   |
+| Rapat         | P       | 2      | 33   |
+
+
+Nah mungkin dengan contoh simple berikut kita langsung notice kalau disini terjadi ***inkonsistensi data*** pada kolom `gender` dan `rating. 
+
+Nah cuman gimana kasusnya kolomnya kalo banyak dan variasinya banyak, pasti lebih sulit dong buat mantenginnya. oleh karena itu disini kita bisa menggunakan struktur data set. 
+```
+columns_to_check = [col for col in df.columns if col not in ['Nama Customer', 'Usia']]
+
+def check_col_val(df1, df2, df3, col):
+    return list(set(df1[col]) ^ set(df2[col]) ^ set(df3[col]))
+
+for col in columns_to_check:
+    print(f'Columns {col}: {check_col_val(df1, df2, df3, col)}')
+
+Output:
+Columns Gender: ['-', 'F', 'Female', 'L', 'Male', 'M', 'P']
+Columns Rating: ['B', 'C', 'Bagus', 'Biasa', 'A', '2', '1', 'Jelek', '3']
+```
+
+Dengan bantuan set kita dapat lebih mudah mengidentifikasi inkonsistensi data pada data kita
+ > *Data consistency is a crucial aspect that ensures the accuracy and reliability of data*.
+
+## C. Trace Changelog using `Tuple`
+![image](https://miro.medium.com/v2/resize:fit:720/format:webp/1*UJNfWhGGQCXZ7Vhmky-hmg.png)
+Faktanya preprocessing data *(data cleaning)* biasanya mengonsumsi waktu lebih banyak ketimbang data tersebut diproses lebih lanjut *(machine learning misalnya)* 
+
+Banyaknya hal dan percobaan yang dilakukan ketika data preprocessing terkadang juga menjadi tantangan, salah satunya adalah melacak perubahan yang sudah kita lakukan.
+
+Nah dengan bantuan `Tuple` kita dapat melacak perubahan setiap step by step yang kita lakukan pada preprocessing data
+| Nama Customer | Gender | Rating | Usia |
+|---------------|--------|--------|------|
+| NaN           | Female | B      | 44.0 |
+| Bobi          | NaN    | C      | 39.0 |
+| John          | Male   | NaN    | NaN  |
+| NaN           | Female | B      | NaN  |
+| Bobi          | NaN    | C      | NaN  |
+
+```
+def fill_missing_val(df):
+    fill_nama_customer = df['Nama Customer'].fillna('Unknown')
+    fill_gender = df['Gender'].fillna(df['Gender'].mode()[0])
+    fill_rating = df['Rating'].fillna('A')
+    fill_usia = df['Usia'].fillna(df['Usia'].mean())
+    return (fill_nama_customer, fill_gender, fill_rating, fill_usia)
+
+step1, step2, step3, step4 = fill_missing_val(df)
+display(step1, step2, step3, step4)
+# Output
+0       John
+..........
+8       Bobi
+Name: Nama Customer, dtype: object0      Male
+1    Female
+..........
+8    Female
+Name: Gender, dtype: object0    A
+1    B
+.........
+8    C
+Name: Rating, dtype: object0    24.000000
+1    47.000000
+..........
+8    39.333333
+Name: Usia, dtype: float64
+```
+Dengan bantuan tuple, kita dapat melakukan multiple return value pada sebuah fungsi, dimana di kasus ini kita gunakan untuk melacak perubahan yang kita lakukan pada setiap imputasi data yang kita lakukan
+
+## D. Make Data Consistent using `Dictionary`
+| Nama Customer | Gender | Rating | Usia |
+|---------------|--------|--------|------|
+| John          | Male   | A      | 48   |
+| Emily         | Female | B      | 25   |
+| Bobi          | Unknown| C      | 25   |
+| John          | M      | Bagus  | 23   |
+| Emily         | F      | Biasa  | 29   |
+
+**Bagaimana biar data tersebut konsisten?**
+Kita bisa menggunakan fungsi `map` dari `pandas` dengan input value dari `dictionary` (untuk memetakan `nilai yang mau diubah`:`nilai setelah diubah` | `key`:`value`) 
+```
+def mapping_value(df):
+    gender_map = {
+        'Male': 'M', 
+        'Female': 'F', 
+        'Unknown': '-'
+        }
+    df['Gender'] = df['Gender'].map(lambda x: gender_map[x] if x in gender_map else x)
+    
+    rating_map = {
+        'Bagus': 'A', 
+        'Biasa': 'B', 
+        'Jelek': 'C'
+        }
+    df['Rating'] = df['Rating'].map(lambda x: rating_map[x] if x in rating_map else x)
+    
+    return df
+
+new_df = mapping_value(new_df)
+new_df.head()
+```
+| Nama Customer | Gender | Rating | Usia |
+|---------------|--------|--------|------|
+| John          | Male   | A      | 27   |
+| Emily         | Female | B      | 45   |
+| Bobi          | Unknown| C      | 24   |
+| John          | Male   | A      | 25   |
+| Emily         | Female | B      | 33   |
+| Bobi          | Unknown| C      | 38   |
