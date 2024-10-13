@@ -1,0 +1,111 @@
+- Playlist (3)
+- 1 Playlist ada 2 lagu
+- Lagu ada 7
+- Default nya 1 user udah ada 1 playlist
+
+
+Asumsinya udah terlogin
+	- Udah Punya Playlist
+
+
+1. Tambah, Hapus lagu ke playlist
+2. Tambah Playlist (dia ngambil playlist yang udah ada)
+
+
+MENU
+1. Lihat Playlist yang ada di Spotipai KW
+2. Manage Playlistmu
+	2.1 Lihat 
+	2.2 Tambahkan ke lagu playlist
+	2.3 Hapus lagu dari playlist
+	2.4 Menambahkan Playlist (Playlist tersedia)
+99. Quit
+
+TIPE DATA
+Playlist - Berisi banyak lagu
+Lagu - Judul | Artist | Album | Durasi | Played | Released
+
+
+
+
+
+
+
+
+
+HOLAAAAAAAAA WHISNU
+1. Lihat Playlist Spotipai KW
+2. Manage Playlistmu
+99. Quit
+
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HOLAAAAAAAAA WHISNU
+1. Lihat Playlist Spotipai KW
+2. Manage Playlistmu
+99. Quit
+
+2
+	2.1 Lihat Daftar Playlist
+	2.2 Lihat Playlist
+	2.2.1 show_playlist("PLAYLIST APA?")
+	2.3 Tambahkan ke lagu playlist
+	2.3.1 add_song_to_playlist("LAGU APA YANG MAU DITAMBAHKAN?", "DITAMBAHKAN KE PLAYLIST MANA?")
+	2.4 Hapus lagu dari playlist 
+	2.3.1 del_song_from_playlist("LAGU MANA YANG MAU DIHAPUS")
+	2.5 Menambahkan Playlist (Playlist tersedia)
+
+2
+masukan playlist mana yang mau diliat
+lagu pop 2024
+
+
+
+
+
+
+
+
+
+
+
+3
+
+
+
+1
+2
+3
+playlist mana yang mau kamu tambahkan>
+3
+
+
+
+
+HOLAAAAAAAAA WHISNU
+1. Lihat Playlist Spotipai KW
+2. Manage Playlistmu
+99. Quit
+
+
+2
+1
+
+
