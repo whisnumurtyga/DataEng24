@@ -1,5 +1,5 @@
-Berikut adalah versi lengkap dari materi scraping dalam format markdown yang bisa langsung kamu copy-paste:
-
+# Welcome to ZENITH #6 🔥
+## Tips and Trick Web Scraping
 
 # 🚀 Tips Scraping Data dengan Python 🕸️
 
@@ -60,3 +60,8 @@ Jika semua elemen sudah diidentifikasi, saatnya mulai ngoding!
 
 🌟 **Selamat Mencoba** 🌟  
 Dengan struktur yang rapi, scraping data jadi lebih mudah dan efisien. Pastikan juga untuk selalu mematuhi kebijakan situs web yang kamu scrape, ya!
+
+
+
+**ZENITH**
+_Zero-hour Engagement : Nurture Insight, Thrive Higher_
